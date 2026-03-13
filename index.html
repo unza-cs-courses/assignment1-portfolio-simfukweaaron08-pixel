@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Aaron Simfukwe — CS Student, AI Enthusiast and Web Developer based in Lusaka, Zambia." />
+  <title>Aaron Simfukwe — Developer & AI Enthusiast</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Lora:ital,wght@0,400;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- =====================================================
+     HEADER / NAV
+     ===================================================== -->
+<header class="site-header" role="banner">
+  <div class="nav-wrap">
+
+    <a href="#home" class="nav-logo" aria-label="Aaronsimfukwe home">
+      <span class="nav-logo-bracket">[</span>AS<span class="nav-logo-bracket">]</span>
+    </a>
+
+    <!-- The hamburger checkbox MUST be a direct sibling of the label AND the ul -->
+    <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
+
+    <label for="menu-toggle" class="hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <ul class="nav-links">
+      <li><a href="#about"    class="nav-link"><em>01.</em> About</a></li>
+      <li><a href="#projects" class="nav-link"><em>02.</em> Projects</a></li>
+      <li><a href="#contact"  class="nav-link"><em>03.</em> Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <a href="https://github.com/simfukweaaron08-pixel" target="_blank" rel="noopener" class="nav-github" aria-label="GitHub profile">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.58v-2.03c-3.34.72-4.04-1.6-4.04-1.6-.54-1.38-1.33-1.74-1.33-1.74-1.08-.74.08-.73.08-.73 1.2.08 1.83 1.23 1.83 1.23 1.06 1.82 2.8 1.3 3.48.99.1-.77.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.22.7.83.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        GitHub
+      </a>
+      <button class="theme-btn" id="themeBtn" aria-label="Toggle light/dark mode">
+        <span class="icon-sun">&#9728;</span>
+        <span class="icon-moon">&#9790;</span>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<main>
+
+<!-- =====================================================
+     HERO
+     ===================================================== -->
+<section id="home" class="hero" aria-labelledby="hero-h1">
+  <div class="hero-grid-bg" aria-hidden="true"></div>
+  <div class="hero-glow-1" aria-hidden="true"></div>
+  <div class="hero-glow-2" aria-hidden="true"></div>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow anim-up">
+      <span class="status-dot" aria-hidden="true"></span>
+      Available for freelance &amp; collaboration
+    </p>
+
+    <h1 id="hero-h1" class="hero-name anim-up delay-1">
+      Aaron<br /><span class="hero-name-outline">Simfukwe</span>
+    </h1>
+
+    <div class="hero-typewriter anim-up delay-2" aria-label="I am a CS Student, AI Enthusiast, and Web Developer">
+      <span class="tw-prompt">&gt;&nbsp;</span>
+      <span id="tw-text"></span>
+      <span class="tw-cursor" aria-hidden="true">_</span>
+    </div>
+
+    <p class="hero-tagline anim-up delay-3">
+      Building at the frontier of <strong>artificial intelligence</strong> and
+      <strong>web development</strong> — from Lusaka, Zambia, to the world.
+    </p>
+
+    <div class="hero-cta anim-up delay-4">
+      <a href="#projects" class="btn btn-primary">Explore My Work &rarr;</a>
+      <a href="https://github.com/simfukweaaron08-pixel" target="_blank" rel="noopener" class="btn btn-outline">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.58v-2.03c-3.34.72-4.04-1.6-4.04-1.6-.54-1.38-1.33-1.74-1.33-1.74-1.08-.74.08-.73.08-.73 1.2.08 1.83 1.23 1.83 1.23 1.06 1.82 2.8 1.3 3.48.99.1-.77.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.22.7.83.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        @simfukweaaron08-pixel
+      </a>
+    </div>
+
+    <div class="hero-stats anim-up delay-5">
+      <div class="stat">
+        <span class="stat-num">3+</span>
+        <span class="stat-lbl">Years coding</span>
+      </div>
+      <div class="stat-divider" aria-hidden="true"></div>
+      <div class="stat">
+        <span class="stat-num">10+</span>
+        <span class="stat-lbl">Projects shipped</span>
+      </div>
+      <div class="stat-divider" aria-hidden="true"></div>
+      <div class="stat">
+        <span class="stat-num">&#8734;</span>
+        <span class="stat-lbl">Curiosity</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating terminal -->
+  <div class="hero-terminal anim-up delay-3" aria-hidden="true">
+    <div class="term-header">
+      <span class="term-dot red"></span>
+      <span class="term-dot yellow"></span>
+      <span class="term-dot green"></span>
+      <span class="term-title">aaron@simfukwe ~ $</span>
+    </div>
+    <div class="term-body">
+      <p><span class="term-prompt">$</span> whoami</p>
+      <p class="term-out">aaron_simfukwe</p>
+      <p><span class="term-prompt">$</span> cat interests.txt</p>
+      <p class="term-out">["AI", "Web Dev", "GitHub",</p>
+      <p class="term-out">&nbsp;"Open Source", "Startups"]</p>
+      <p><span class="term-prompt">$</span> echo $STATUS</p>
+      <p class="term-out accent">available_for_work=true</p>
+      <p><span class="term-prompt">$</span> <span class="term-blink">&#9608;</span></p>
+    </div>
+  </div>
+
+  <div class="scroll-hint" aria-hidden="true">
+    <span class="scroll-line"></span>
+    <span class="scroll-txt">scroll</span>
+  </div>
+</section>
+
+<!-- =====================================================
+     ABOUT
+     ===================================================== -->
+<section id="about" class="about" aria-labelledby="about-h2">
+  <div class="container">
+
+    <div class="section-label">
+      <span class="section-num">// 01</span>
+      <span class="section-name">About</span>
+    </div>
+
+    <!-- Heading row with animated cartoon -->
+    <div class="about-heading-row scroll-reveal sr-fade">
+      <h2 id="about-h2" class="about-heading">Who's<br /><em>typing this?</em></h2>
+
+      <!-- Animated SVG coding character -->
+      <div class="coder-wrap" aria-hidden="true">
+        <svg class="coder-svg" viewBox="0 0 200 175" xmlns="http://www.w3.org/2000/svg">
+          <!-- Desk -->
+          <rect x="20" y="140" width="160" height="6" rx="3" fill="#21262d"/>
+          <!-- Monitor body -->
+          <rect x="45" y="40" width="110" height="78" rx="7" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+          <!-- Screen -->
+          <rect x="52" y="47" width="96" height="62" rx="4" fill="#0d1117"/>
+          <!-- Screen cyan glow -->
+          <rect x="52" y="47" width="96" height="62" rx="4" fill="#00e5ff" opacity="0.03"/>
+          <!-- Code lines -->
+          <rect class="code-line" x="60" y="56" width="44" height="3" rx="1.5" fill="#00e5ff" opacity="0.9"/>
+          <rect class="code-line" x="60" y="63" width="32" height="3" rx="1.5" fill="#58a6ff" opacity="0.8"/>
+          <rect class="code-line" x="68" y="70" width="55" height="3" rx="1.5" fill="#3fb950" opacity="0.85"/>
+          <rect class="code-line" x="68" y="77" width="36" height="3" rx="1.5" fill="#00e5ff" opacity="0.7"/>
+          <rect class="code-line" x="60" y="84" width="48" height="3" rx="1.5" fill="#58a6ff" opacity="0.75"/>
+          <rect class="code-line" x="68" y="91" width="28" height="3" rx="1.5" fill="#3fb950" opacity="0.8"/>
+          <!-- Blinking cursor -->
+          <rect class="screen-cursor" x="98" y="91" width="5" height="3" rx="1" fill="#00e5ff"/>
+          <!-- Monitor stand -->
+          <rect x="93" y="118" width="14" height="12" rx="2" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+          <rect x="78" y="128" width="44" height="5" rx="2.5" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+          <!-- Chair back -->
+          <rect x="78" y="155" width="44" height="3" rx="1.5" fill="#21262d"/>
+          <!-- Person torso -->
+          <rect x="84" y="128" width="32" height="28" rx="6" fill="#1c2128"/>
+          <!-- Shirt detail -->
+          <line x1="100" y1="132" x2="100" y2="150" stroke="#30363d" stroke-width="1"/>
+          <!-- Head -->
+          <circle cx="100" cy="120" r="13" fill="#c8a882"/>
+          <!-- Hair -->
+          <path d="M 87 117 Q 89 106 100 107 Q 111 106 113 117 L 113 112 Q 111 103 100 103 Q 89 103 87 112 Z" fill="#2c1810"/>
+          <!-- Eyes -->
+          <circle cx="95.5" cy="118" r="1.8" fill="#1a1a1a"/>
+          <circle cx="104.5" cy="118" r="1.8" fill="#1a1a1a"/>
+          <!-- Smile -->
+          <path d="M 95 124 Q 100 128 105 124" stroke="#a0826d" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+          <!-- Left arm typing -->
+          <g class="arm-l">
+            <line x1="84" y1="136" x2="67" y2="148" stroke="#c8a882" stroke-width="5" stroke-linecap="round"/>
+            <circle cx="67" cy="149" r="4" fill="#c8a882"/>
+          </g>
+          <!-- Right arm typing -->
+          <g class="arm-r">
+            <line x1="116" y1="136" x2="133" y2="148" stroke="#c8a882" stroke-width="5" stroke-linecap="round"/>
+            <circle cx="133" cy="149" r="4" fill="#c8a882"/>
+          </g>
+          <!-- Keyboard -->
+          <rect x="58" y="148" width="84" height="13" rx="3" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+          <rect x="63"  y="151" width="9"  height="5" rx="1.5" fill="#21262d"/>
+          <rect x="75"  y="151" width="9"  height="5" rx="1.5" fill="#21262d"/>
+          <rect x="87"  y="151" width="9"  height="5" rx="1.5" fill="#21262d"/>
+          <rect x="99"  y="151" width="9"  height="5" rx="1.5" fill="#21262d"/>
+          <rect x="111" y="151" width="9"  height="5" rx="1.5" fill="#21262d"/>
+          <rect x="123" y="151" width="9"  height="5" rx="1.5" fill="#21262d"/>
+          <!-- Coffee mug -->
+          <rect x="155" y="120" width="16" height="18" rx="3" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+          <path d="M171 125 Q178 125 178 130 Q178 135 171 135" stroke="#30363d" stroke-width="1.5" fill="none"/>
+          <rect x="158" y="123" width="10" height="2" rx="1" fill="#00e5ff" opacity="0.4"/>
+          <!-- Steam -->
+          <path class="steam-a" d="M160 120 Q158 115 160 110" stroke="#00e5ff" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.6"/>
+          <path class="steam-b" d="M165 120 Q163 114 165 108" stroke="#00e5ff" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.4"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="about-grid">
+      <!-- Image column -->
+      <div class="about-img-col scroll-reveal sr-left">
+        <div class="about-photo-frame">
+          <img
+            src="images/profile.svg"
+            alt="Aaron Simfukwe, Computer Science student and developer based in Lusaka Zambia"
+            class="about-photo"
+            width="380"
+            height="460"
+            loading="lazy"
+          />
+          <div class="about-photo-accent" aria-hidden="true"></div>
+        </div>
+
+        <div class="github-card scroll-reveal sr-up">
+          <p class="github-card-label">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.58v-2.03c-3.34.72-4.04-1.6-4.04-1.6-.54-1.38-1.33-1.74-1.33-1.74-1.08-.74.08-.73.08-.73 1.2.08 1.83 1.23 1.83 1.23 1.06 1.82 2.8 1.3 3.48.99.1-.77.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.22.7.83.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub Contributions
+          </p>
+          <div class="contrib-grid" id="contribGrid" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <!-- Bio column -->
+      <div class="about-body scroll-reveal sr-right">
+        <p class="bio">
+          Hey, I'm Aaron Simfukwe — a Computer Science student at the University of Zambia
+          with a genuine obsession for AI and web development. I first fell in love with
+          coding when I realised that a few lines of text could create something people
+          actually use. That feeling never left me.
+        </p>
+        <p class="bio">
+          My biggest current interest is the intersection of <strong>Large Language Models</strong>
+          and practical web applications. I believe AI is not just a tool — it is a new
+          programming primitive that changes how we build everything. I spend a lot of
+          time on GitHub reading great code, contributing to open-source projects, and
+          pushing my own experiments live.
+        </p>
+        <p class="bio">
+          I am also deeply excited about building for Zambia's growing digital economy —
+          integrating local payment systems like Airtel Money and MTN MoMo, building
+          mobile-first apps for low-bandwidth environments, and helping small businesses
+          get online. I want to be part of the generation that puts Zambia on the global
+          tech map.
+        </p>
+        <p class="bio">
+          When I am not coding, you will find me reading AI research papers, tweaking
+          my GitHub profile, or thinking about how to turn a side project into a real
+          startup. I am always open to collaborating on something interesting.
+        </p>
+
+        <div class="skills-block scroll-reveal sr-up">
+          <h3 class="skills-title">// Skills &amp; Tools</h3>
+          <div class="skills-cols">
+            <div class="skill-col">
+              <span class="skill-col-label">Frontend</span>
+              <ul class="skill-list" role="list">
+                <li class="skill-item">HTML5</li>
+                <li class="skill-item">CSS3</li>
+                <li class="skill-item">JavaScript (ES6+)</li>
+                <li class="skill-item">React</li>
+              </ul>
+            </div>
+            <div class="skill-col">
+              <span class="skill-col-label">AI / Backend</span>
+              <ul class="skill-list" role="list">
+                <li class="skill-item">Python</li>
+                <li class="skill-item">LLM APIs</li>
+                <li class="skill-item">OpenGL / GLSL</li>
+                <li class="skill-item">Node.js</li>
+              </ul>
+            </div>
+            <div class="skill-col">
+              <span class="skill-col-label">Tools</span>
+              <ul class="skill-list" role="list">
+                <li class="skill-item">Git &amp; GitHub</li>
+                <li class="skill-item">Flutter</li>
+                <li class="skill-item">WordPress</li>
+                <li class="skill-item">VS Code</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- =====================================================
+     PROJECTS
+     ===================================================== -->
+<section id="projects" class="projects" aria-labelledby="projects-h2">
+  <div class="container">
+
+    <div class="section-label scroll-reveal sr-fade">
+      <span class="section-num">// 02</span>
+      <span class="section-name">Projects</span>
+    </div>
+    <h2 id="projects-h2" class="projects-heading scroll-reveal sr-fade">Things I've<br />shipped.</h2>
+
+    <div class="projects-grid">
+
+      <!-- Card 1 -->
+      <article class="project-card scroll-reveal sr-up" aria-labelledby="p1-title">
+        <div class="card-img-wrap">
+          <img
+            src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=700&h=400&fit=crop"
+            alt="Person using an AI chat interface on a laptop screen in a dark room"
+            class="card-img"
+            width="700"
+            height="400"
+            loading="lazy"
+          />
+          <div class="card-img-overlay" aria-hidden="true"></div>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-tag ai-tag">AI / Web App</span>
+            <span class="card-year">2025</span>
+          </div>
+          <h3 id="p1-title" class="card-title">ZamBot — AI Assistant</h3>
+          <p class="card-desc">
+            A context-aware AI chatbot built for Zambian users. Powered by the Claude API,
+            it answers questions about local laws, health services, and government processes
+            in plain English and Bemba. Streaming UI, optimised for slow connections.
+          </p>
+          <div class="card-tech" aria-label="Technologies used">
+            <span class="tech">Claude API</span>
+            <span class="tech">React</span>
+            <span class="tech">Node.js</span>
+            <span class="tech">SSE</span>
+          </div>
+          <div class="card-links">
+            <a href="#" class="btn btn-primary btn-sm" aria-label="View ZamBot live demo">Live Demo &#8599;</a>
+            <a href="https://github.com/simfukweaaron08-pixel" class="btn btn-ghost btn-sm" aria-label="View ZamBot on GitHub">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.58v-2.03c-3.34.72-4.04-1.6-4.04-1.6-.54-1.38-1.33-1.74-1.33-1.74-1.08-.74.08-.73.08-.73 1.2.08 1.83 1.23 1.83 1.23 1.06 1.82 2.8 1.3 3.48.99.1-.77.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.22.7.83.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="project-card scroll-reveal sr-up delay-1" aria-labelledby="p2-title">
+        <div class="card-img-wrap">
+          <img
+            src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop"
+            alt="Multiple computer monitors showing lines of code in a dark office setup"
+            class="card-img"
+            width="600"
+            height="360"
+            loading="lazy"
+          />
+          <div class="card-img-overlay" aria-hidden="true"></div>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-tag">Visual Computing</span>
+            <span class="card-year">2025</span>
+          </div>
+          <h3 id="p2-title" class="card-title">Voxel Terrain Engine</h3>
+          <p class="card-desc">
+            Real-time procedural terrain rendered with OpenGL and Python. Implements
+            Perlin noise heightmaps, Phong shading, and a first-person camera system.
+            Built as part of CSC4505 Visual Computing at UNZA.
+          </p>
+          <div class="card-tech" aria-label="Technologies used">
+            <span class="tech">OpenGL</span>
+            <span class="tech">Python</span>
+            <span class="tech">GLSL</span>
+            <span class="tech">NumPy</span>
+          </div>
+          <div class="card-links">
+            <a href="#" class="btn btn-primary btn-sm" aria-label="View Voxel Engine demo">Demo &#8599;</a>
+            <a href="https://github.com/simfukweaaron08-pixel" class="btn btn-ghost btn-sm" aria-label="View Voxel Engine on GitHub">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.58v-2.03c-3.34.72-4.04-1.6-4.04-1.6-.54-1.38-1.33-1.74-1.33-1.74-1.08-.74.08-.73.08-.73 1.2.08 1.83 1.23 1.83 1.23 1.06 1.82 2.8 1.3 3.48.99.1-.77.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.22.7.83.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="project-card scroll-reveal sr-up delay-2" aria-labelledby="p3-title">
+        <div class="card-img-wrap">
+          <img
+            src="https://images.pexels.com/photos/11035471/pexels-photo-11035471.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop"
+            alt="Dark monitor showing a GitHub code repository with green contribution graph"
+            class="card-img"
+            width="600"
+            height="360"
+            loading="lazy"
+          />
+          <div class="card-img-overlay" aria-hidden="true"></div>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-tag">Web App</span>
+            <span class="card-year">2024</span>
+          </div>
+          <h3 id="p3-title" class="card-title">GitHub Profile Dashboard</h3>
+          <p class="card-desc">
+            A beautiful analytics dashboard for GitHub profiles. Uses the GitHub REST API
+            to render contribution heatmaps, language breakdowns, and streak stats.
+            Fully responsive and client-side only — no backend required.
+          </p>
+          <div class="card-tech" aria-label="Technologies used">
+            <span class="tech">JavaScript</span>
+            <span class="tech">GitHub API</span>
+            <span class="tech">CSS Grid</span>
+            <span class="tech">Chart.js</span>
+          </div>
+          <div class="card-links">
+            <a href="#" class="btn btn-primary btn-sm" aria-label="View GitHub Dashboard live">Live &#8599;</a>
+            <a href="https://github.com/simfukweaaron08-pixel" class="btn btn-ghost btn-sm" aria-label="View Dashboard on GitHub">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.58v-2.03c-3.34.72-4.04-1.6-4.04-1.6-.54-1.38-1.33-1.74-1.33-1.74-1.08-.74.08-.73.08-.73 1.2.08 1.83 1.23 1.83 1.23 1.06 1.82 2.8 1.3 3.48.99.1-.77.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.22.7.83.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="project-card scroll-reveal sr-up delay-3" aria-labelledby="p4-title">
+        <div class="card-img-wrap">
+          <img
+            src="https://images.pexels.com/photos/6804604/pexels-photo-6804604.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop"
+            alt="Person using a mobile phone app with a bright clean interface"
+            class="card-img"
+            width="600"
+            height="360"
+            loading="lazy"
+          />
+          <div class="card-img-overlay" aria-hidden="true"></div>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-tag">Mobile App</span>
+            <span class="card-year">2024</span>
+          </div>
+          <h3 id="p4-title" class="card-title">StudyPal — UNZA Companion</h3>
+          <p class="card-desc">
+            A Flutter study app for UNZA students with spaced-repetition flashcards,
+            a timetable planner, and offline-first Firebase sync. Built to solve a
+            real problem — now used by 80+ students on campus.
+          </p>
+          <div class="card-tech" aria-label="Technologies used">
+            <span class="tech">Flutter</span>
+            <span class="tech">Dart</span>
+            <span class="tech">Firebase</span>
+            <span class="tech">SQLite</span>
+          </div>
+          <div class="card-links">
+            <a href="#" class="btn btn-primary btn-sm" aria-label="View StudyPal on Play Store">Play Store &#8599;</a>
+            <a href="https://github.com/simfukweaaron08-pixel" class="btn btn-ghost btn-sm" aria-label="View StudyPal on GitHub">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.58v-2.03c-3.34.72-4.04-1.6-4.04-1.6-.54-1.38-1.33-1.74-1.33-1.74-1.08-.74.08-.73.08-.73 1.2.08 1.83 1.23 1.83 1.23 1.06 1.82 2.8 1.3 3.48.99.1-.77.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.22.7.83.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div><!-- /projects-grid -->
+
+    <div class="projects-more scroll-reveal sr-fade">
+      <a href="https://github.com/simfukweaaron08-pixel" target="_blank" rel="noopener" class="btn btn-outline">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.58v-2.03c-3.34.72-4.04-1.6-4.04-1.6-.54-1.38-1.33-1.74-1.33-1.74-1.08-.74.08-.73.08-.73 1.2.08 1.83 1.23 1.83 1.23 1.06 1.82 2.8 1.3 3.48.99.1-.77.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.22.7.83.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        See all repositories on GitHub
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- =====================================================
+     CONTACT
+     ===================================================== -->
+<section id="contact" class="contact" aria-labelledby="contact-h2">
+  <div class="container">
+
+    <div class="section-label scroll-reveal sr-fade">
+      <span class="section-num">// 03</span>
+      <span class="section-name">Contact</span>
+    </div>
+    <h2 id="contact-h2" class="contact-heading scroll-reveal sr-fade">Let's build<br /><em>the future.</em></h2>
+
+    <div class="contact-grid">
+
+      <div class="contact-left scroll-reveal sr-left">
+        <p class="contact-intro">
+          Whether you have a freelance project, a startup idea, or just want
+          to talk AI and code — my inbox is always open. I reply to everything.
+        </p>
+
+        <address class="contact-channels" aria-label="Ways to reach Aaron">
+          <a href="mailto:simfukweaaron08@gmail.com" class="channel">
+            <span class="channel-icon" aria-hidden="true">&#9993;</span>
+            <span class="channel-body">
+              <span class="channel-label">Email</span>
+              <span class="channel-val">simfukweaaron08@gmail.com</span>
+            </span>
+          </a>
+          <a href="https://github.com/simfukweaaron08-pixel" target="_blank" rel="noopener" class="channel">
+            <span class="channel-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.58v-2.03c-3.34.72-4.04-1.6-4.04-1.6-.54-1.38-1.33-1.74-1.33-1.74-1.08-.74.08-.73.08-.73 1.2.08 1.83 1.23 1.83 1.23 1.06 1.82 2.8 1.3 3.48.99.1-.77.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.22.7.83.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </span>
+            <span class="channel-body">
+              <span class="channel-label">GitHub</span>
+              <span class="channel-val">simfukweaaron08-pixel</span>
+            </span>
+          </a>
+          <div class="channel channel-static">
+            <span class="channel-icon" aria-hidden="true">&#128205;</span>
+            <span class="channel-body">
+              <span class="channel-label">Location</span>
+              <span class="channel-val">Lusaka, Zambia &#127487;&#127474;</span>
+            </span>
+          </div>
+        </address>
+      </div>
+
+      <div class="contact-right scroll-reveal sr-right">
+        <form id="contactForm" class="contact-form" novalidate aria-label="Send Aaron a message">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname" class="form-label">Name <span class="req" aria-hidden="true">*</span></label>
+              <input
+                type="text"
+                id="fname"
+                name="name"
+                class="form-input"
+                placeholder="Your name"
+                required
+                minlength="2"
+                maxlength="80"
+                autocomplete="name"
+                aria-required="true"
+                aria-describedby="fname-err"
+              />
+              <span class="form-err" id="fname-err" role="alert" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="femail" class="form-label">Email <span class="req" aria-hidden="true">*</span></label>
+              <input
+                type="email"
+                id="femail"
+                name="email"
+                class="form-input"
+                placeholder="you@example.com"
+                required
+                autocomplete="email"
+                aria-required="true"
+                aria-describedby="femail-err"
+              />
+              <span class="form-err" id="femail-err" role="alert" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="fsubject" class="form-label">Subject</label>
+            <input
+              type="text"
+              id="fsubject"
+              name="subject"
+              class="form-input"
+              placeholder="What is this about?"
+              maxlength="120"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="fmessage" class="form-label">Message <span class="req" aria-hidden="true">*</span></label>
+            <textarea
+              id="fmessage"
+              name="message"
+              class="form-input form-textarea"
+              placeholder="Tell me about your project or idea..."
+              required
+              minlength="20"
+              rows="5"
+              aria-required="true"
+              aria-describedby="fmessage-err"
+            ></textarea>
+            <span class="form-err" id="fmessage-err" role="alert" aria-live="polite"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">
+            Send Message &rarr;
+          </button>
+
+          <div class="form-success" id="formSuccess" role="status" aria-live="polite" hidden>
+            &#10003; Message sent! I will get back to you soon.
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+      <p class="footer-copy">
+        <span class="footer-slash" aria-hidden="true">//</span>
+        &copy; <span id="fyear"></span> Aaron Simfukwe. Built with &#9829; in Lusaka.
+      </p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#about"    class="footer-link">About</a>
+        <a href="#projects" class="footer-link">Projects</a>
+        <a href="#contact"  class="footer-link">Contact</a>
+      </nav>
+      <div class="footer-social" aria-label="Social links">
+        <a href="https://github.com/simfukweaaron08-pixel" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.58v-2.03c-3.34.72-4.04-1.6-4.04-1.6-.54-1.38-1.33-1.74-1.33-1.74-1.08-.74.08-.73.08-.73 1.2.08 1.83 1.23 1.83 1.23 1.06 1.82 2.8 1.3 3.48.99.1-.77.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.22.7.83.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="#" class="social-link" aria-label="LinkedIn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="#" class="social-link" aria-label="Twitter / X">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- =====================================================
+     JAVASCRIPT
+     ===================================================== -->
+<script>
+(function () {
+  'use strict';
+
+  /* ── Theme toggle ──────────────────────────────── */
+  var html = document.documentElement;
+  var saved = localStorage.getItem('portfolio-theme') || 'dark';
+  html.setAttribute('data-theme', saved);
+
+  document.getElementById('themeBtn').addEventListener('click', function () {
+    var next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    localStorage.setItem('portfolio-theme', next);
+  });
+
+  /* ── Footer year ───────────────────────────────── */
+  document.getElementById('fyear').textContent = new Date().getFullYear();
+
+  /* ── Mobile nav: close on link click ──────────── */
+  document.querySelectorAll('.nav-link, .footer-link').forEach(function (link) {
+    link.addEventListener('click', function () {
+      document.getElementById('menu-toggle').checked = false;
+    });
+  });
+
+  /* ── Typewriter ────────────────────────────────── */
+  var words   = ['CS Student.', 'AI Enthusiast.', 'Web Developer.', 'GitHub Lover.', 'Open Source Fan.'];
+  var el      = document.getElementById('tw-text');
+  var wi = 0, ci = 0, deleting = false;
+
+  function tick() {
+    var word = words[wi];
+    if (!deleting) {
+      ci++;
+      el.textContent = word.slice(0, ci);
+      if (ci === word.length) {
+        deleting = true;
+        setTimeout(tick, 1600);
+        return;
+      }
+    } else {
+      ci--;
+      el.textContent = word.slice(0, ci);
+      if (ci === 0) {
+        deleting = false;
+        wi = (wi + 1) % words.length;
+      }
+    }
+    setTimeout(tick, deleting ? 55 : 90);
+  }
+  setTimeout(tick, 900);
+
+  /* ── GitHub contribution grid ──────────────────── */
+  var grid = document.getElementById('contribGrid');
+  if (grid) {
+    var levels = [0,1,1,2,2,3,3,4];
+    for (var i = 0; i < 182; i++) {
+      var cell = document.createElement('span');
+      cell.className = 'cc cc-' + levels[Math.floor(Math.random() * levels.length)];
+      grid.appendChild(cell);
+    }
+  }
+
+  /* ── Scroll reveal (IntersectionObserver) ──────── */
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+
+  document.querySelectorAll('.scroll-reveal, .project-card').forEach(function (el) {
+    observer.observe(el);
+  });
+
+  /* ── Header scroll shadow ───────────────────────── */
+  var hdr = document.querySelector('.site-header');
+  window.addEventListener('scroll', function () {
+    hdr.classList.toggle('scrolled', window.scrollY > 10);
+  }, { passive: true });
+
+  /* ── Contact form validation ────────────────────── */
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var valid = true;
+    var fields = [
+      { id: 'fname',    errId: 'fname-err',    msg: 'Please enter your name (at least 2 characters).' },
+      { id: 'femail',   errId: 'femail-err',   msg: 'Please enter a valid email address.' },
+      { id: 'fmessage', errId: 'fmessage-err', msg: 'Please write at least 20 characters.' }
+    ];
+    fields.forEach(function (f) {
+      var inp = document.getElementById(f.id);
+      var err = document.getElementById(f.errId);
+      if (!inp.validity.valid) {
+        err.textContent = f.msg;
+        inp.classList.add('input-error');
+        valid = false;
+      } else {
+        err.textContent = '';
+        inp.classList.remove('input-error');
+      }
+    });
+    if (valid) {
+      document.getElementById('contactForm').hidden = true;
+      document.getElementById('formSuccess').hidden = false;
+    }
+  });
+
+})();
+</script>
+</body>
+</html>
